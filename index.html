@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050816" />
+    <title>Chandani Kumari</title>
+    <meta
+      name="description"
+      content="Modern developer portfolio built with React, Vite, Tailwind CSS, Framer Motion, SwiperJS, and EmailJS."
+    />
+    <script>
+      (() => {
+        try {
+          const storageKey = 'portfolio-theme';
+          const savedTheme = localStorage.getItem(storageKey);
+          const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          const theme = savedTheme === 'dark' || savedTheme === 'light' ? savedTheme : systemTheme;
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+          document.documentElement.style.colorScheme = theme;
+        } catch (error) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = 'dark';
+        }
+      })();
+      // If the user somehow lands on a raw PDF path like /resume.pdf, rewrite the URL
+      // to the SPA resume section immediately to avoid the browser requesting the raw file on refresh.
+      try {
+        if (window.location && window.location.pathname && window.location.pathname.toLowerCase().endsWith('.pdf')) {
+          history.replaceState(null, '', '/#resume');
+        }
+      } catch (e) {
+        /* ignore */
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
