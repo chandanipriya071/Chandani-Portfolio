@@ -37,12 +37,12 @@ export default function Navbar() {
     : 'border-slate-200/80 bg-white/90 text-slate-600 hover:border-blue-300/70 hover:bg-blue-50 hover:text-blue-700';
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full px-4 pt-0 sm:px-6 lg:px-8">
+    <header className="fixed left-0 top-0 z-50 w-full px-0 pt-0">
       <motion.nav
         initial={{ y: -24, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.65, ease: 'easeOut' }}
-        className={`relative mx-auto max-w-7xl rounded-full border px-3 py-2.5 backdrop-blur md:px-4 ${navShellClass}`}
+        className={`relative w-full rounded-none border px-3 py-2.5 backdrop-blur md:px-4 ${navShellClass}`}
       >
         {/* thin top accent line to match reference */}
         <div className="absolute left-0 top-0 h-[2px] w-full bg-rose-600/60 rounded-t-full" />
@@ -129,7 +129,7 @@ export default function Navbar() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -18, opacity: 0 }}
               transition={{ duration: 0.35 }}
-              className="mx-4 mt-20 rounded-3xl border border-white/10 bg-black/90 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
+              className="mx-0 mt-20 rounded-3xl border border-white/10 bg-black/90 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
             >
               <div className="flex flex-col gap-3">
                 {navItems.map((item, index) => (

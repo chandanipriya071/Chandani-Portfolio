@@ -33,7 +33,7 @@ export default function Projects() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(96,165,250,0.08),transparent_24%)]" />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-0">
         <SectionHeading
           title="Featured Projects"
           description="A curated collection of modern interfaces, AI tools, and full-stack experiences designed to feel polished, fast, and production-ready."
@@ -46,7 +46,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5 }}
-          className="mx-auto mb-12 flex flex-wrap items-center justify-center gap-3"
+          className="w-full mb-12 flex flex-wrap items-center justify-center gap-3"
         >
           {filters.map((filter) => {
             const isActive = activeFilter === filter;

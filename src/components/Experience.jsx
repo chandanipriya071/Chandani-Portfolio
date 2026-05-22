@@ -5,7 +5,7 @@ import { experience } from '../data/siteData';
 export default function Experience() {
   return (
     <section id="experience" className="section-pad theme-page">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-0">
         <SectionHeading
           eyebrow="Experience"
           title="A clear timeline of growth and delivery"
@@ -14,7 +14,7 @@ export default function Experience() {
           highlightWords={['timeline', 'growth', 'delivery']}
         />
 
-        <div className="relative mx-auto max-w-4xl">
+        <div className="relative w-full">
           <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-blue-400 via-blue-500 to-transparent md:left-1/2 md:-ml-px" />
           <div className="space-y-8">
             {experience.map((item, index) => (

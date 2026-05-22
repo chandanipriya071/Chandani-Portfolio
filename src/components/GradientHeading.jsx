@@ -24,10 +24,11 @@ export default function GradientHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.65, ease: 'easeOut' }}
-      whileHover={{ scale: 1.01 }}
-      className={glow ? 'heading-glow-pulse transition-all duration-300' : 'transition-all duration-300'}
+      whileHover={{ scale: 1.02, y: -2 }}
+      whileTap={{ scale: 0.995 }}
+      className={glow ? 'heading-glow-pulse transition-all duration-300 will-change-transform' : 'transition-all duration-300 will-change-transform'}
     >
-      <Tag className={`${SIZE_MAP[size] || SIZE_MAP.section} ${className}`}>
+      <Tag className={`${SIZE_MAP[size] || SIZE_MAP.section} ${className} group`}> 
         <ShineText>
           <DynamicGradientText
             text={text}

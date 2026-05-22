@@ -5,7 +5,7 @@ import { skills } from '../data/siteData';
 export default function Skills() {
   return (
     <section id="skills" className="section-pad theme-page">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-0">
         <SectionHeading
           eyebrow="Skills"
           title="Tools and technologies I use to ship quality"

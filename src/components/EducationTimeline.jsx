@@ -5,10 +5,10 @@ import TimelineNode from './TimelineNode';
 
 export default function EducationTimeline() {
   return (
-    <section id="education" className="relative overflow-hidden theme-page px-4 py-16 text-white sm:px-6 lg:px-8 lg:py-20">
+    <section id="education" className="relative overflow-hidden theme-page px-0 py-16 text-white lg:py-20">
       <div className="pointer-events-none absolute inset-0 -z-10" />
 
-      <div className="mx-auto max-w-7xl">
+      <div className="w-full">
         <SectionHeading
           title="Education"
           description="“Education is the most powerful weapon which you can use to change the world.”"
@@ -17,7 +17,7 @@ export default function EducationTimeline() {
           glow
         />
 
-        <div className="relative mx-auto max-w-6xl">
+        <div className="relative w-full">
           <div className="pointer-events-none absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-gradient-to-b from-rose-500/0 via-rose-500/60 to-rose-500/0" />
 
           <div className="space-y-16 lg:space-y-20">

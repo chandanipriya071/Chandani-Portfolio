@@ -12,12 +12,13 @@ const values = [
 export default function About() {
   return (
     <section id="about" className="section-pad theme-page">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-0">
         <SectionHeading
           title="About Me"
           description="I’m a Computer Science and Engineering student who builds responsive web interfaces with React, JavaScript, Tailwind CSS, and thoughtful UI systems."
           theme="about"
           size="sectionLarge"
+          highlightWords={["About", "Me"]}
         />
 
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">

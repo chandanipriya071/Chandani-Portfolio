@@ -8,7 +8,7 @@ export default function SkillsSection() {
     <section id="skills" className="relative py-20">
       <FloatingIcons />
 
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="w-full px-0">
         <motion.header
           initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}

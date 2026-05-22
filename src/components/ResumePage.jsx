@@ -24,9 +24,9 @@ export default function ResumePage() {
   };
 
   return (
-    <main id="resume" className="theme-page py-16 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
+    <main id="resume" className="theme-page py-16 px-0">
+      <div className="w-full">
+        <div className="w-full text-center">
           <motion.h1 initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="text-4xl sm:text-5xl font-extrabold">
             My <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-500 to-rose-500">Professional Resume</span>
           </motion.h1>

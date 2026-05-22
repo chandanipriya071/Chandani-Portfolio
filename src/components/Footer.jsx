@@ -7,7 +7,7 @@ import GradientHeading from './GradientHeading';
 export default function Footer() {
   return (
     <footer className="theme-surface border-t border-[var(--theme-border)]">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="w-full px-0 py-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
