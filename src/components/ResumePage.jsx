@@ -9,6 +9,7 @@ import ResumePdf from '../assets/Resume.pdf';
 
 export default function ResumePage() {
   const [open, setOpen] = useState(false);
+  const [showViewer, setShowViewer] = useState(false);
   const { isDark } = useTheme();
 
   // Prefer bundled asset if present (imported from src/assets/Resume.pdf), fall back to public path
@@ -35,7 +36,7 @@ export default function ResumePage() {
           </motion.p>
 
           <div className="mt-6 flex items-center justify-center gap-4">
-            <button onClick={() => setOpen(true)} className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg hover:scale-105 transition-all duration-300" aria-haspopup="dialog">
+            <button onClick={() => setShowViewer(true)} className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-500 px-4 py-2 text-sm font-semibold text-white shadow-lg hover:scale-105 transition-all duration-300" aria-haspopup="dialog">
               <FiEye /> View Resume
             </button>
 
@@ -51,7 +52,26 @@ export default function ResumePage() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <ResumeViewer src={pdfSrc} />
+            {showViewer ? (
+              <ResumeViewer src={pdfSrc} />
+            ) : (
+              <div className="glass-card flex h-[70vh] items-center justify-center rounded-3xl border border-[var(--theme-border)] p-8 text-center">
+                <div className="max-w-xl">
+                  <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-500">Resume Preview</p>
+                  <h3 className="mt-4 text-2xl font-bold theme-text">Click View Resume to load the PDF</h3>
+                  <p className="mt-3 text-sm leading-7 theme-muted">
+                    The resume will stay unloaded until you open it, which prevents the browser from triggering an automatic download on page load.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => setShowViewer(true)}
+                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-500 px-5 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    <FiEye /> Load Resume Preview
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
           <aside className="lg:col-span-1">
