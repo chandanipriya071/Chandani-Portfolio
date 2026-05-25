@@ -10,7 +10,7 @@ import ResumePage from './components/ResumePage';
 
 export default function App() {
   return (
-    <div className="relative overflow-x-hidden theme-page">
+    <div className="relative overflow-x-hidden theme-page scroll-smooth min-h-screen">
       <Navbar />
       <main>
         <Hero />

@@ -2,7 +2,7 @@ import { FiPlus, FiMinus, FiRefreshCcw, FiMaximize, FiDownload } from 'react-ico
 
 export default function ResumeControls({ onZoomIn, onZoomOut, onReset, onFullscreen, onDownload }) {
   return (
-    <div className="absolute right-6 top-6 z-50 flex flex-col items-center gap-3">
+    <div className="absolute right-4 top-4 z-50 flex flex-col items-center gap-3 sm:right-6 sm:top-6">
       <button
         onClick={onZoomIn}
         className="w-12 h-12 rounded-full bg-white/6 backdrop-blur border border-white/8 flex items-center justify-center text-white hover:scale-105 transition-all duration-200 shadow-lg"

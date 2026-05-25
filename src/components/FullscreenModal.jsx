@@ -14,7 +14,7 @@ export default function FullscreenModal({ children, onClose }) {
         animate={{ scale: 1 }}
         exit={{ scale: 0.96 }}
         transition={{ duration: 0.25 }}
-        className="relative w-full max-w-6xl h-[90vh] bg-transparent"
+        className="relative w-full max-w-[95vw] h-[90vh] bg-transparent"
       >
         <button
           onClick={onClose}

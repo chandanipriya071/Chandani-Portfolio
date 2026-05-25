@@ -81,12 +81,12 @@ export default function ResumeViewer({ src, thumbnail, title = 'Resume' }) {
 
   const viewer = pdfSrc ? (
     <div className="h-full w-full rounded-3xl overflow-hidden bg-transparent">
-      <div className="h-full w-full flex items-center justify-center">
+      <div className="h-full w-full min-h-[35vh] overflow-auto">
         <iframe
           ref={iframeRef}
           title="resume-viewer"
           src={pdfSrc}
-          className="h-full w-full"
+          className="h-full min-h-[35vh] w-full min-w-full"
           style={{ transform: `scale(${zoom})`, transformOrigin: 'top center' }}
         />
       </div>
@@ -106,7 +106,7 @@ export default function ResumeViewer({ src, thumbnail, title = 'Resume' }) {
   );
 
   return (
-    <div className="relative h-[70vh] lg:h-[80vh]">
+    <div className="relative min-h-[55vh] h-auto lg:min-h-[70vh]">
       <ResumeControls onZoomIn={zoomIn} onZoomOut={zoomOut} onReset={reset} onFullscreen={() => setFullscreen(true)} onDownload={download} />
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="glass-card p-4 h-full w-full rounded-3xl border border-white/6">

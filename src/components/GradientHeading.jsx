@@ -3,9 +3,9 @@ import DynamicGradientText from './DynamicGradientText';
 import ShineText from './ShineText';
 
 const SIZE_MAP = {
-  hero: 'font-display text-5xl font-extrabold leading-[0.92] tracking-tight sm:text-6xl lg:text-7xl xl:text-[5.1rem]',
-  section: 'font-display text-3xl font-bold leading-tight tracking-tight md:text-5xl',
-  sectionLarge: 'font-display text-4xl font-extrabold leading-tight tracking-tight md:text-5xl lg:text-6xl',
+  hero: 'font-display text-4xl font-extrabold leading-[0.95] tracking-tight sm:text-5xl lg:text-7xl xl:text-[5.1rem]',
+  section: 'font-display text-2xl font-bold leading-tight tracking-tight sm:text-3xl md:text-5xl',
+  sectionLarge: 'font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl',
   compact: 'font-display text-2xl font-bold leading-tight tracking-tight md:text-3xl',
 };
 

@@ -25,7 +25,7 @@ export default function ResumePage() {
   };
 
   return (
-    <main id="resume" className="theme-page py-16 px-0">
+    <section id="resume" className="section-pad theme-page py-16 px-0">
       <div className="w-full">
         <div className="w-full text-center">
           <motion.h1 initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="text-4xl sm:text-5xl font-extrabold">
@@ -93,6 +93,6 @@ export default function ResumePage() {
           </FullscreenModal>
         ) : null}
       </div>
-    </main>
+    </section>
   );
 }

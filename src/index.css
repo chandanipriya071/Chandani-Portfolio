@@ -44,9 +44,25 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id],
+section {
+  scroll-margin-top: 5.5rem;
+}
+
+img,
+svg,
+iframe,
+video,
+canvas,
+picture {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: hidden;
   background: var(--theme-page-bg);
   color: var(--theme-page-text);
   font-family: 'Inter', sans-serif;
@@ -102,6 +118,19 @@ body {
 }
 
 .card-contents { position: relative; z-index: 10; }
+
+.active-link,
+.active-mobile-link {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(255, 255, 255, 0.04));
+  border-color: rgba(239, 68, 68, 0.35);
+  color: #f97316 !important;
+}
+
+.active-mobile-link {
+  background: #ef4444 !important;
+  border-color: #dc2626 !important;
+  color: #fff !important;
+}
 
 .card-shine { pointer-events: none; position: absolute; inset: -30%; transform: rotate(15deg); opacity: 0; transition: opacity 350ms ease; background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01)); }
 .glass-card.premium:hover .card-shine { opacity: 1; }
@@ -325,8 +354,22 @@ html:not(.dark) .text-slate-500 {
 }
 
 .section-pad {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-pad {
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-pad {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 @keyframes premiumGradientShift {
