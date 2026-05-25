@@ -5,15 +5,14 @@ import ResumeViewer from './ResumeViewer';
 import FullscreenModal from './FullscreenModal';
 import { FiDownload, FiEye, FiMaximize } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
-import ResumePdf from '../assets/Resume.pdf';
 
 export default function ResumePage() {
   const [open, setOpen] = useState(false);
   const [showViewer, setShowViewer] = useState(false);
   const { isDark } = useTheme();
 
-  // Prefer bundled asset if present (imported from src/assets/Resume.pdf), fall back to public path
-  const pdfSrc = ResumePdf || '/assets/resume.pdf';
+  // Use the public asset so the resume is always available from a stable direct URL.
+  const pdfSrc = '/resume.pdf';
 
   const download = () => {
     const a = document.createElement('a');

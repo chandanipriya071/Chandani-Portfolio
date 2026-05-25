@@ -1,72 +1,69 @@
+import { FaAws, FaCode, FaCss3Alt, FaJava } from 'react-icons/fa';
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaPython,
-  FaJava,
-  FaDatabase,
-  FaAws,
-  FaGitAlt,
-  FaCode,
-  FaPaintBrush,
-  FaFileAlt,
-} from 'react-icons/fa';
-import { FaNodeJs, FaGithub } from 'react-icons/fa';
+  SiCanva,
+  SiDocker,
+  SiGithub,
+  SiHtml5,
+  SiJupyter,
+  SiMongodb,
+  SiMysql,
+  SiNodedotjs,
+  SiNextdotjs,
+  SiPython,
+  SiReact,
+  SiGit,
+} from 'react-icons/si';
 
 export const skillsCategories = [
   {
     id: 'frontend',
     title: 'Frontend',
-    icon: FaReact,
+    icon: SiReact,
+    accent: '#4f86ff',
     items: [
-      { name: 'HTML', icon: FaHtml5, progress: 95 },
-      { name: 'CSS', icon: FaCss3Alt, progress: 92 },
-      { name: 'Next.js', icon: FaCode, progress: 88 },
+      { name: 'React', icon: SiReact, progress: 96, accent: '#4f86ff', iconColor: '#61dafb' },
+      { name: 'HTML', icon: SiHtml5, progress: 95, accent: '#ef7f3d', iconColor: '#f97316' },
+      { name: 'CSS', icon: FaCss3Alt, progress: 92, accent: '#18b7d1', iconColor: '#38bdf8' },
+      { name: 'Next.js', icon: SiNextdotjs, progress: 88, accent: '#7c8596', iconColor: '#e5e7eb' },
     ],
   },
 
   {
     id: 'backend',
     title: 'Backend',
-    icon: FaNodeJs,
+    icon: SiNodedotjs,
+    accent: '#28c36a',
     items: [
-      { name: 'Node.js', icon: FaNodeJs, progress: 88 },
-      { name: 'Python', icon: FaPython, progress: 82 },
-      { name: 'Java', icon: FaJava, progress: 70 },
+      { name: 'Node.js', icon: SiNodedotjs, progress: 88, accent: '#28c36a', iconColor: '#4ade80' },
+      { name: 'Python', icon: SiPython, progress: 82, accent: '#d8a62d', iconColor: '#facc15' },
+      { name: 'Java', icon: FaJava, progress: 70, accent: '#ef7f3d', iconColor: '#f97316' },
+      { name: 'Docker', icon: SiDocker, progress: 74, accent: '#4f86ff', iconColor: '#38bdf8' },
     ],
   },
 
   {
-    id: 'database',
-    title: 'Database',
-    icon: FaDatabase,
+    id: 'databases-tools',
+    title: 'Databases & Tools',
+    icon: SiMysql,
+    accent: '#ef7f3d',
     items: [
-      { name: 'MySQL', icon: FaDatabase, progress: 78 },
+      { name: 'MySQL', icon: SiMysql, progress: 78, accent: '#4f86ff', iconColor: '#38bdf8' },
+      { name: 'MongoDB', icon: SiMongodb, progress: 74, accent: '#22c55e', iconColor: '#4ade80' },
+      { name: 'AWS', icon: FaAws, progress: 72, accent: '#ef7f3d', iconColor: '#fb923c' },
     ],
   },
 
   {
-    id: 'tools',
-    title: 'Tools',
+    id: 'development-tools',
+    title: 'Development Tools',
     icon: FaCode,
+    accent: '#8b5cf6',
     items: [
-      { name: 'AWS', icon: FaAws, progress: 72 },
-      { name: 'Git', icon: FaGitAlt, progress: 90 },
-      { name: 'GitHub', icon: FaGithub, progress: 92 },
-      { name: 'VS Code', icon: FaCode, progress: 95 },
-      { name: 'Jupyter', icon: FaCode, progress: 68 },
-      { name: 'Canva', icon: FaPaintBrush, progress: 60 },
-    ],
-  },
-
-  {
-    id: 'ms-office',
-    title: 'MS Office',
-    icon: FaFileAlt,
-    items: [
-      { name: 'Word', icon: FaFileAlt, progress: 85 },
-      { name: 'Excel', icon: FaFileAlt, progress: 82 },
-      { name: 'PowerPoint', icon: FaFileAlt, progress: 80 },
+      { name: 'GitHub', icon: SiGithub, progress: 92, accent: '#7c8596', iconColor: '#f8fafc' },
+      { name: 'Git', icon: SiGit, progress: 90, accent: '#ef7f3d', iconColor: '#f97316' },
+      { name: 'VS Code', icon: FaCode, progress: 95, accent: '#4f86ff', iconColor: '#38bdf8' },
+      { name: 'Jupyter Notebook', icon: SiJupyter, progress: 68, accent: '#ef7f3d', iconColor: '#f97316' },
+      { name: 'Canva', icon: SiCanva, progress: 60, accent: '#a855f7', iconColor: '#d8b4fe' },
     ],
   },
 ];
